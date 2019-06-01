@@ -16,8 +16,8 @@ In the Dockerfile, there is 3 commands:
  * one for copy the files in the container (COPY src/ /var/www/html/)
  * one to execute the spript js when the container started (CMD ["node", "/opt/app/index.js"])
 
-The script js returns a random paragraph as JSON payload to the client.
+The script js returns a random date with a hour as JSON payload to the client.
 
-To create a new docker image, write the command ```docker buid -t res/express .```
+To create a new docker image, write the command ```docker buid -t res/express .```. 
 
-To run a docker container, write the command ```docker res/express```.
+To run a docker container, write the command ```docker run res/express```. If we want to connect with telnet, we need a port mapping ```-p 9090:3000``` and the command will be ```telnet 192.168.99.100 9090``` 

@@ -17,7 +17,7 @@ In the Dockerfile, there is 2 commands:
 
 To create a new docker image, write the command ```docker buid -t res/apache2 .```
 
-To run a docker container, write the command ```docker -p 9090:80 res/apache2```. Add a ```-d``` if you want to run background.
+To run a docker container, write the command ```docker run -p 9090:80 res/apache2```. Add a ```-d``` if you want to run background.
 
 To go inside of the container, write the command ```docker exec -it ID_CONT /bin/bash```
 

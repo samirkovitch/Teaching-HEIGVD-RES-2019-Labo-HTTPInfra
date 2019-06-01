@@ -11,11 +11,13 @@
 
 ### Procedure for demo
 
-In the Dockerfile, there is 2 commands: one for the origin of the container (FROM php:5.6-apache) and one for copy the files in the container (COPY src/ /var/www/html/)
+In the Dockerfile, there is 2 commands: 
+ * one for the origin of the container (FROM php:5.6-apache) 
+ * one for copy the files in the container (COPY src/ /var/www/html/)
 
 To create a new docker image, write the command ```docker buid -t res/apache2 .```
 
-To run a doker container, write the command ```docker docker -p 9090:80 res/apache2```. Add a ```-d``` if you want to run background.
+To run a docker container, write the command ```docker -p 9090:80 res/apache2```. Add a ```-d``` if you want to run background.
 
 To go inside of the container, write the command ```docker exec -it ID_CONT /bin/bash```
 

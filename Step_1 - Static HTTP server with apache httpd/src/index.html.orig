@@ -69,7 +69,7 @@
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
     <div class="container">
-      <p id="dates-test">Copyright &copy; Your Website 2019</p>
+      Copyright &copy; Your Website 2019
     </div>
   </footer>
 
@@ -82,9 +82,6 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.min.js"></script>
-
-  <!-- Custom script to load dates -->
-  <script src="js/dates.js"></script>
 
 </body>
 

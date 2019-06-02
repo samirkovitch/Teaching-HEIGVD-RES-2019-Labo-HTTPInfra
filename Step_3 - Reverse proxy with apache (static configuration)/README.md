@@ -30,7 +30,7 @@ IP found: 172.17.0.3
 
 Port: 3000
 
-*Go inside docker-machine:* docker-machine ssh
+*Go inside docker-machine:* ```docker-machine ssh```
 
 ### Test for apache_static inside docker-machine
 
@@ -75,10 +75,10 @@ If we try to connect to the Web sites with the IP, we will be redirect to a erro
 We can access to the first Web site with the URL ```labo-http.res.ch:PORT``` and to the second with ```labo-http.res.ch:PORT/api/dates/```
 ## Test the proxy
 
- * Create the image: docker build -t res/apache_rp_static .
- * Run the container: docker run -p 9090:80 res/apache_rp_static
- * Test to connect with the ip: 192.168.99.100:9090 (the result need to be a error message)
- * Test to connect with a writin request: 
+ * Create the image: ```docker build -t res/apache_rp_static .```
+ * Run the container: ```docker run -p 8080:80 res/apache_rp_static```
+ * Test to connect with the ip: 192.168.99.100:8080 (the result need to be a error message)
+ * Test to connect with a writing request: 
  
  ``` 
 telnet 192.168.99.100 9090    

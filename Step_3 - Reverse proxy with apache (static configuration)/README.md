@@ -10,6 +10,8 @@
 
 ## Start and check the 2 server containers
 
+**Need the containers of previous steps**
+
 ```docker run -d --name apache_static res/apache_php```
 
 ```docker run -d --name express_dynamic res/express```

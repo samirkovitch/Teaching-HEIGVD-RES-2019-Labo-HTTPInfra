@@ -55,6 +55,8 @@ The second and third lines display the IP addresses of the static and dynamic ap
 
 *The step 3 (static reverse proxy) src/ has been copied in src/ (only for default configuration)*
 
+Build the image of the dynamic reverse proxy : ```docker build -t res/apache_rp_dynamic .``` 
+
 Run 3 times ```docker run -d res/apache_php``` to create 3 static web site containers without a name and one with a name ```docker run -d --name apache_static res/apache_php```
 
 Same with the dynamic web site but instead of 3, only run 2 times without a name : ```docker run -d res/express```, and with a name : ```docker run -d --name express_dynamic res/express```
@@ -63,6 +65,6 @@ Search the IP addresses of named containers with ```docker inspect CONTAINER_NAM
  - apache_static   : ```172.17.0.5```
  - express_dynamic : ```172.17.0.8```
 
-Run a dynamic reverse proxy container with those IP addresses ```docker run -d -e STATIC_APP=172.17.0.5:80 -e DYNAMIC_APP=172.17.0.8:3000 --name apache_rp -p 8080:80 res/apache_rp```
+Run a dynamic reverse proxy container with those IP addresses ```docker run -d -e STATIC_APP=172.17.0.5:80 -e DYNAMIC_APP=172.17.0.8:3000 --name apache_rp -p 8080:80 res/apache_rp_dynamic```
 
 Write this URL ```http://labo-http.res.ch:8080/``` to see if it's working

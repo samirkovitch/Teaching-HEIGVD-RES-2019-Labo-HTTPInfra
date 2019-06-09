@@ -1,0 +1,10 @@
+debug = true
+
+# Web configuration backend
+[web]
+address = ":9000"
+
+# Docker configuration
+[docker]
+domain = "labo-http.res.ch"
+watch = true
